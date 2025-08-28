@@ -1,69 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Johannes Muru - vCard</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-      max-width: 400px;
-      width: 90%;
-    }
-    img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 15px;
-    }
-    h1 {
-      margin: 10px 0;
-      font-size: 24px;
-    }
-    p {
-      margin: 5px 0;
-      color: #555;
-    }
-    a {
-      text-decoration: none;
-      color: #dadae4;
-      display: block;
-      margin: 8px 0;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-        
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johannes Muru - vCard</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .vcard {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 300px;
+        }
+        .vcard h1 {
+            margin-bottom: 10px;
+        }
+        .vcard p {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .vcard a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        .vcard a:hover {
+            text-decoration: underline;
+        }
+        .qr-code {
+            margin-top: 20px;
+        }
+        img {
+            width: 150px;
+        }
+        .icon {
+            color: #0073e6;
+        }
+    </style>
 </head>
 <body>
-  <div class="card">
-    <img src="profile.jpg" alt="Johannes Muru">
-    <h1>Johannes Muru</h1>
-    <p>Tallinn University of Technology</p>
-    <p>Early Stage Researcher</p>
-    <a>Email</a>
-    <p href="mailto:johannes.muru@taltech.ee">johannes.muru@taltech.ee</p>
-    <a>Phone</a>
-    <p href="tel:+37256236879">+372 5623 6879</p>
-    <p href="https://www.linkedin.com/in/johannesmuru/" target="_blank">LinkedIn</p>
-    <p href="https://www.etis.ee/CV/Johannes_Muru/eng/" target="_blank">Etis</p>
-  </div>
+    <div class="vcard">
+        <h1>Johannes Muru</h1>
+        <p>Early-Stage Researcher</p>
+
+        <p><i class="fas fa-envelope icon"></i> Email: <a href="mailto:johannes.muru@taltech.ee">johannes.muru@taltech.ee</a></p>
+        <p><i class="fas fa-globe icon"></i> Website: <a href="https://www.etis.ee/CV/Johannes_Muru/eng/" target="_blank">ETIS</a></p>
+        <p><i class="fab fa-linkedin icon"></i> LinkedIn: <a href="https://www.linkedin.com/in/johannesmuru/" target="_blank">linkedin.com/in/johannesmuru/</a></p>
+
+        
+    </div>
 </body>
 </html>
