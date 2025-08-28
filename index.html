@@ -23,6 +23,30 @@ S<!DOCTYPE html>
             text-align: center;
             width: 300px;
         }
+
+                /* Header section with background color */
+        .vcard-header {
+            background-color: #0073e6; /* Change this to your preferred color */
+            padding: 20px;
+            border-radius: 15px 15px 0 0;
+            color: #fff;
+        }
+        
+        /* Profile photo */
+        .vcard-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            margin-bottom: 10px;
+        }
+        
+        /* Name and profession */
+        .vcard-header h1, .vcard-header h2 {
+            margin: 5px 0;
+        }
+        
         .vcard h1 {
             margin-bottom: 10px;
         }
@@ -79,8 +103,12 @@ S<!DOCTYPE html>
 </head>
 <body>
     <div class="vcard">
-        <h1>Johannes Muru</h1>
-        <h2>Early-Stage Researcher</h2>
+        <!-- Header area with image and name/profession -->
+        <div class="vcard-header">
+            <img src="images/johannes.jpg" alt="Johannes Muru" class="vcard-photo">
+            <h1>Johannes Muru</h1>
+            <h2>Early-Stage Researcher</h2>
+        </div>
 
         <div class="univ-links">
             <p>Tallinn University of Technology</p>
