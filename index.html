@@ -26,8 +26,8 @@
 
                 /* Header section with background color */
         .vcard-header {
-            background-color: #aa1352; /* Change this to your preferred color */
-            padding: 20px;
+            background: linear-gradient(135deg, #aa1352, #ff5c8d); /* Change this to your preferred color */
+            padding: 10px;
             border-radius: 15px 15px 15px 15px;
             color: #fff;
         }
@@ -48,8 +48,8 @@
             margin: 5px 0;
         }
         
-        .vcard h1 {
-            margin-bottom: 10px;
+        .vcard-header h1 {
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
         .vcard-header h2 {
             margin: 2px 0;
@@ -105,23 +105,25 @@
 
         .univ-links {
             margin-top: 15px;
-            line-height: 1.2; /* tighter lines */
-            font-size: 0.9em; /* slightly smaller for department and group */
-            color: #333;      /* nice readable color */
+            line-height: 1.2;          /* tighter lines */
+            font-size: 0.9em;           /* base font size for department/group */
+            color: #333;                /* readable color */
+            text-align: center;
         }
         
         .univ-links .univ-name {
-            font-size: 1em;    /* slightly larger than department/group */
-            font-weight: bold;  /* emphasize the university */
-            margin-bottom: 3px; /* reduce space below */
+            font-size: 1em;             /* slightly larger for emphasis */
+            font-weight: bold;           /* emphasize the university */
+            margin-bottom: 3px;          /* space below name */
         }
         
         .univ-links p {
-            margin: 2px 0;     /* tighter spacing between lines */
+            margin: 2px 0;              /* tight spacing between lines */
+            padding: 0;                 /* consistent padding */
         }
         
         .univ-links a {
-            color: #0073e6;    /* keep link blue */
+            color: #0073e6;             /* keep link blue */
             text-decoration: none;
         }
         
@@ -150,6 +152,7 @@
             </p>
         </div>
         <p><i class="fas fa-envelope icon"></i> <a href="mailto:johannes.muru@taltech.ee">johannes.muru@taltech.ee</a></p>
+        <p><i class="fas fa-phone icon"></i> <a +372 5623 6879</a></p>
         <div class="icon-links">
             <a href="https://www.etis.ee/CV/Johannes_Muru/eng/" target="_blank" title="etis"><i class="fas fa-globe"></i></a>
             <a href="https://www.linkedin.com/in/johannesmuru/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
