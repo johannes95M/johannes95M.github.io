@@ -1,164 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Johannes Muru - vCard</title>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .vcard {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            text-align: center;
-            width: 300px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Johannes Muru - vCard</title>
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
-                /* Header section with background color */
-        .vcard-header {
-            background: linear-gradient(135deg, #aa1352, #e4067e); /* Change this to your preferred color */
-            padding: 10px;
-            border-radius: 15px 15px 15px 15px;
-            color: #fff;
-        }
-        
-        /* Profile photo */
-        .vcard-photo {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: center 40%;
-            border: 3px solid #fff;
-            margin-bottom: 10px;
-        }
-        
-        /* Name and profession */
-        .vcard-header h1, .vcard-header h2 {
-            margin: 5px 0;
-        }
-        
-        .vcard-header h1 {
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-        }
-        .vcard-header h2 {
-            margin: 2px 0;
-            font-size: 0.8em;       /* smaller than h1 */
-            font-weight: 600;        /* semi-bold */
-            color: #fff;             /* keeps it readable on colored background */
-        }
-        .vcard p {
-            margin: 10px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-        .vcard a {
-            color: #0073e6;
-            text-decoration: none;
-        }
-        .vcard a:hover {
-            text-decoration: underline;
-        }
-        img {
-            width: 150px;
-        }
-        /* Default color for envelope and phone */
-        .icon-links .fa-envelope, 
-        .icon-links .fa-phone {
-            color: #777777;
-            transition: transform 0.2s, color 0.2s;
-        }
+/* vCard container */
+.vcard {
+    background-color: #fff;
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 0;
+    overflow: hidden;
+}
 
-        /* Website icon grayish */
-        .icon-links .fa-globe {
-            font-size: 1.8em;
-            color: #777777;
-            transition: transform 0.2s, color 0.2s;
-        }
-        .icon-links .fa-globe:hover {
-            transform: scale(1.2);
-            color: #555555;
-        }
-        
-        /* LinkedIn icon original blue */
-        .icon-links .fa-linkedin {
-            font-size: 1.8em;
-            color: #0077B5; /* LinkedIn brand color */
-            transition: transform 0.2s, color 0.2s;
-        }
-        .icon-links .fa-linkedin:hover {
-            transform: scale(1.2);
-            color: #005582; /* slightly darker on hover */
-        }
+/* Header with photo and name/profession */
+.vcard-header {
+    background: linear-gradient(135deg, #aa1352, #e4067e);
+    padding: 20px;
+    color: #fff;
+}
 
-        .univ-links {
-            margin-top: 15px;
-            line-height: 1.2;          /* tighter lines */
-            font-size: 0.9em;           /* base font size for department/group */
-            color: #333;                /* readable color */
-            text-align: center;
-        }
-        
-        .univ-links .univ-name {
-            font-size: 1em;             /* slightly larger for emphasis */
-            font-weight: bold;           /* emphasize the university */
-            margin-bottom: 3px;          /* space below name */
-        }
-        
-        .univ-links p {
-            margin: 2px 0;              /* tight spacing between lines */
-            padding: 0;                 /* consistent padding */
-        }
-        
-        .univ-links a {
-            color: #0073e6;             /* keep link blue */
-            text-decoration: none;
-        }
-        
-        .univ-links a:hover {
-            text-decoration: underline;
-        }
-                
-    </style>
+.vcard-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 40%;
+    border: 3px solid #fff;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+.vcard-photo:hover {
+    transform: scale(1.05);
+}
+
+.vcard-header h1 {
+    margin: 5px 0;
+}
+
+.vcard-header h2 {
+    margin: 2px 0;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+/* Contact info */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9em;
+}
+
+.contact-info i {
+    color: #777777;
+    font-size: 1.2em;
+}
+
+/* University block */
+.univ-links {
+    margin: 15px 20px;
+    line-height: 1.2;
+    font-size: 0.9em;
+    color: #333;
+    text-align: center;
+}
+
+.univ-links .univ-name {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.univ-links p {
+    margin: 2px 0;
+}
+
+.univ-links a {
+    color: #0073e6;
+    text-decoration: none;
+}
+.univ-links a:hover {
+    text-decoration: underline;
+}
+
+/* Icon links for ETIS/LinkedIn */
+.icon-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.8em;
+    margin: 15px 0 20px 0;
+}
+
+.icon-links .fa-globe {
+    color: #777777;
+    transition: transform 0.2s, color 0.2s;
+}
+.icon-links .fa-globe:hover {
+    transform: scale(1.2);
+    color: #555555;
+}
+
+.icon-links .fa-linkedin {
+    color: #0077B5;
+    transition: transform 0.2s, color 0.2s;
+}
+.icon-links .fa-linkedin:hover {
+    transform: scale(1.2);
+    color: #005582;
+}
+
+/* Optional: card hover shadow */
+.vcard:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    transition: box-shadow 0.3s;
+}
+
+</style>
 </head>
 <body>
-    <div class="vcard">
-        <!-- Header area with image and name/profession -->
-        <div class="vcard-header">
-            <img src="images/johannes.JPG" alt="Johannes Muru" class="vcard-photo">
-            <h1>Johannes Muru</h1>
-            <h2>Early-Stage Researcher</h2>
-        </div>
-
-       <div class="univ-links">
-            <p class="univ-name">TALLINN UNIVERSITY OF TECHNOLOGY</p>
-            <p>Department of Electrical Power Engineering and Mechatronics</p>
-            <p>
-                <a href="https://taltech.ee/en/mechatronics-and-autonomous-systems" target="_blank">
-                    Mechatronics and Autonomous Systems Research Group
-                </a>
-            </p>
-        </div>
-        <p><i class="fas fa-envelope icon"></i> <a href="mailto:johannes.muru@taltech.ee">johannes.muru@taltech.ee</a></p>
-        <p><i class="fas fa-phone icon"></i> <a> +372 5623 6879</a></p>
-        <div class="icon-links">
-            <a href="https://www.etis.ee/CV/Johannes_Muru/eng/" target="_blank" title="etis"><i class="fas fa-globe"></i></a>
-            <a href="https://www.linkedin.com/in/johannesmuru/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        </div>
-
-        
+<div class="vcard">
+    <div class="vcard-header">
+        <img src="images/johannes.JPG" alt="Johannes Muru" class="vcard-photo">
+        <h1>Johannes Muru</h1>
+        <h2>Early-Stage Researcher</h2>
     </div>
+
+    <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> <a href="mailto:johannes.muru@taltech.ee">johannes.muru@taltech.ee</a></p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+37256236879">+372 5623 6879</a></p>
+    </div>
+
+    <div class="univ-links">
+        <p class="univ-name">TALLINN UNIVERSITY OF TECHNOLOGY</p>
+        <p>Department of Electrical Power Engineering and Mechatronics</p>
+        <p><a href="https://taltech.ee/en/mechatronics-and-autonomous-systems" target="_blank">
+            Mechatronics and Autonomous Systems Research Group
+        </a></p>
+    </div>
+
+    <div class="icon-links">
+        <a href="https://www.etis.ee/CV/Johannes_Muru/eng/" target="_blank" title="ETIS"><i class="fas fa-globe"></i></a>
+        <a href="https://www.linkedin.com/in/johannesmuru/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+</div>
 </body>
 </html>
