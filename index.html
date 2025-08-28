@@ -53,8 +53,9 @@ S<!DOCTYPE html>
         }
         .vcard-header h2 {
             margin: 2px 0;
-            font-size: 0.9em;  /* smaller than h1 */
-            font-weight: normal; /* optional: make it lighter */
+            font-size: 0.8em;       /* smaller than h1 */
+            font-weight: 600;        /* semi-bold */
+            color: #fff;             /* keeps it readable on colored background */
         }
         .vcard p {
             margin: 10px 0;
@@ -101,6 +102,32 @@ S<!DOCTYPE html>
             transform: scale(1.2);
             color: #005582; /* slightly darker on hover */
         }
+
+        .univ-links {
+            margin-top: 15px;
+            line-height: 1.2; /* tighter lines */
+            font-size: 0.9em; /* slightly smaller for department and group */
+            color: #333;      /* nice readable color */
+        }
+        
+        .univ-links .univ-name {
+            font-size: 1em;    /* slightly larger than department/group */
+            font-weight: bold;  /* emphasize the university */
+            margin-bottom: 3px; /* reduce space below */
+        }
+        
+        .univ-links p {
+            margin: 2px 0;     /* tighter spacing between lines */
+        }
+        
+        .univ-links a {
+            color: #0073e6;    /* keep link blue */
+            text-decoration: none;
+        }
+        
+        .univ-links a:hover {
+            text-decoration: underline;
+        }
                 
     </style>
 </head>
@@ -113,15 +140,15 @@ S<!DOCTYPE html>
             <h2>Early-Stage Researcher</h2>
         </div>
 
-        <div class="univ-links">
-            <p>Tallinn University of Technology</p>
+       <div class="univ-links">
+            <p class="univ-name">Tallinn University of Technology</p>
             <p>Department of Electrical Power Engineering and Mechatronics</p>
             <p>
                 <a href="https://taltech.ee/en/mechatronics-and-autonomous-systems" target="_blank">
                     Mechatronics and Autonomous Systems Research Group
                 </a>
             </p>
-        </div>    
+        </div>
         <p><i class="fas fa-envelope icon"></i> <a href="mailto:johannes.muru@taltech.ee">johannes.muru@taltech.ee</a></p>
         <div class="icon-links">
             <a href="https://www.etis.ee/CV/Johannes_Muru/eng/" target="_blank" title="etis"><i class="fas fa-globe"></i></a>
