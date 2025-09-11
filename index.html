@@ -136,6 +136,12 @@ body {
     color: #005582;
 }
 
+.icon-links a {
+    display: flex;             
+    align-items: center;        
+    justify-content: center;
+}
+
 /* Optional: card hover shadow */
 .vcard:hover {
     box-shadow: 0 8px 25px rgba(0,0,0,0.3);
@@ -143,16 +149,14 @@ body {
 }
     
 .logo {
-    height: 28px;           /* fixed height for all logos */
+    height: 1em;           /* fixed height for all logos */
     width: auto;            /* keeps proportions */
-    margin-right: 8px;
-    vertical-align: middle; /* aligns with text */
     transition: transform 0.2s ease, opacity 0.2s ease; /* smooth hover */
   }
 
   .logo:hover {
     transform: scale(1.15); /* grow slightly on hover */
-    color: #005582;          
+    opacity: 0.85;         
     cursor: pointer;
   }
 
