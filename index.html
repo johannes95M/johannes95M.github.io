@@ -142,6 +142,10 @@ body {
     justify-content: center;
 }
 
+.icon-links i {
+    line-height: 1;  /* remove extra space around font icons */
+}
+
 /* Optional: card hover shadow */
 .vcard:hover {
     box-shadow: 0 8px 25px rgba(0,0,0,0.3);
@@ -150,7 +154,8 @@ body {
     
 .logo {
     height: 1em;           /* fixed height for all logos */
-    width: auto;            /* keeps proportions */
+    width: auto;
+    display: block;
     transition: transform 0.2s ease, opacity 0.2s ease; /* smooth hover */
   }
 
