@@ -142,13 +142,18 @@ body {
 }
     
 .logo {
-    width: 14px;
-    height: 14px;
+    height: 28px;           /* fixed height for all logos */
+    width: auto;            /* keeps proportions */
     margin-right: 8px;
-}
-.icon-links .logo:hover {
-    transform: scale(1.2);
-}
+    vertical-align: middle; /* aligns with text */
+    transition: transform 0.2s ease, opacity 0.2s ease; /* smooth hover */
+  }
+
+  .logo:hover {
+    transform: scale(1.15); /* grow slightly on hover */
+    opacity: 0.85;          /* subtle fade */
+    cursor: pointer;
+  }
 
 </style>
 </head>
